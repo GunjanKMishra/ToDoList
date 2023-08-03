@@ -1,0 +1,21 @@
+                <footer>
+                    Copyright © 2023
+                </footer>
+
+                <!-- checkbox click strike through feature -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+                <script>
+                    $("[class^='check']").change(function () {
+                        const checkbox = $(this);
+                        const text = checkbox.siblings("p")
+                        if (checkbox.prop("checked")) {
+                            text.css({ "text-decoration": "line-through" });;
+                        }
+                        else {
+                            text.css({ "text-decoration": "none" });;
+                        }
+                    });
+                </script>
+                </body>
+
+                </html>

@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<div class="box">
+    <h1>
+        <%= day %>, <%= date %>
+        <%= month %>
+        <%= year %>
+    </h1>
+</div>
+<% if (locals.task) { %>
+    <% for( let i=0; i < task.length; i++ ) { %>
+        <div class="card">
+            <input type="checkbox" name="taskCheckBox" class="checkbox check" id="check<%= i %>">
+            <p id="text<%= i %>">
+                <%= task[i] %>
+            </p>
+        </div>
+        <% } %>
+            <% } %>
+
+                <div class="task">
+                    <form action="/" method="post">
+                        <input type="text" name="taskItem" class="taskItem" autocomplete="off" required>
+                        <input type="submit" value="+" class="btn">
+                    </form>
+                </div>
+<%- include("partials/footer.ejs") %>
