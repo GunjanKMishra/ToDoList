@@ -33,7 +33,7 @@ app.get("/work",(req,res)=>{
 
 app.post("/",(req,res)=>{
     taskToday.push(req.body['taskItem']);
-    res.render("index.ejs",{
+    res.render("./index.ejs",{
         day:dayA[day],
         month:monthA[month],
         date: date,
@@ -44,7 +44,7 @@ app.post("/",(req,res)=>{
 
 app.post("/work",(req,res)=>{
     taskWork.push(req.body['taskItem']);
-    res.render("work.ejs",{
+    res.render("./work.ejs",{
         task: taskWork,
         });
 });
