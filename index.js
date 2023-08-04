@@ -7,12 +7,12 @@ const port = 3000;
 app.use(expres.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
-var day = new Date().getDay();
-var month = new Date().getMonth();
-var date = new Date().getDate();
-var year = new Date().getFullYear();
-let taskToday= [];
-let taskWork= [];
+const day = new Date().getDay();
+const month = new Date().getMonth();
+const date = new Date().getDate();
+const year = new Date().getFullYear();
+const taskToday= [];
+const taskWork= [];
 
 const dayA =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const monthA =['January','February','March','April','May','June','July','August','September','October','November','December'];
