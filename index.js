@@ -50,4 +50,4 @@ app.post("/work",(req,res)=>{
 });
 
 
-app.listen(port,()=>{console.log(`server has been sarted at port ${port}.`);});
+app.listen(port,()=>{console.log(`server has been sarted at port ${port}!`);});
