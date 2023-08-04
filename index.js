@@ -11,11 +11,11 @@ var day = new Date().getDay();
 var month = new Date().getMonth();
 var date = new Date().getDate();
 var year = new Date().getFullYear();
-var taskToday= [];
-var taskWork= [];
+let taskToday= [];
+let taskWork= [];
 
-var dayA =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-var monthA =['January','February','March','April','May','June','July','August','September','October','November','December'];
+const dayA =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const monthA =['January','February','March','April','May','June','July','August','September','October','November','December'];
 
 app.get("/",(req,res)=>{
     res.render("./index.ejs",{
