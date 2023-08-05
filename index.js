@@ -11,8 +11,11 @@ const day = new Date().getDay();
 const month = new Date().getMonth();
 const date = new Date().getDate();
 const year = new Date().getFullYear();
-const taskToday= [];
-const taskWork= [];
+
+const tasks = {
+    today: [],
+    work: []
+  };
 
 const dayA =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const monthA =['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -23,29 +26,29 @@ app.get("/",(req,res)=>{
         month:monthA[month],
         date: date,
         year: year,
-        task: taskToday,
+        task: tasks.today,
         });
 });
 
 app.get("/work",(req,res)=>{
-    res.render("./work.ejs",{task: taskWork,});
+    res.render("./work.ejs",{task: tasks.work,});
 });
 
 app.post("/",(req,res)=>{
-    taskToday.push(req.body['taskItem']);
+    tasks.today.push(req.body['taskItem']);
     res.render("./index.ejs",{
         day:dayA[day],
         month:monthA[month],
         date: date,
         year: year,
-        task: taskToday,
+        task: tasks.today,
         });
 });
 
 app.post("/work",(req,res)=>{
-    taskWork.push(req.body['taskItem']);
+    tasks.work.push(req.body['taskItem']);
     res.render("./work.ejs",{
-        task: taskWork,
+        task: tasks.work,
         });
 });
 
