@@ -4,7 +4,7 @@
         Work List
     </h1>
 </div>
-<% if (locals.task) { %>
+<% if (task && task.length>0) { %>
     <% for( let i=0; i < task.length; i++ ) { %>
         <div class="card">
             <input type="checkbox" name="taskCheckBox" class="checkbox check" id="check<%= i %>">
